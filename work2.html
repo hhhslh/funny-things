@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>qiushibaike</title>
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+	html,body,ul,{
+		margin:0;
+		padding:0;
+	}
+	.all {
+        background-color: #f7f7f7;
+    }
+	.top{
+		height: 82px;
+		margin:0 auto;
+		background-color: #ffd52b;
+	}
+	.top img{
+		vertical-align: middle;
+		float:left;
+		margin-left: 200px;
+	}
+	.clearfix::after{
+     	display:block;
+     	clear:both;
+     	height:0;
+     	content:"";
+     }
+	.top ul li{
+		list-style: none;
+		float:left;
+	    padding:0px 14px;
+	    margin-right:1px;
+	    font-size: 16.5px;
+	    color: #7a4624;
+        line-height: 82px; 
+     }
+     .top ul li:hover{
+     	background-color: #ffe36f;
+     }
+     /*.top ul li.selected{
+     	height:78px;
+     	line-height:78px;
+     	border-bottom: 4px solid #7a4624;
+     	background-color:#ffe36f;
+     }*/
+     .changed-bg{
+        border-bottom: 4px solid #7a4624;
+        height:78px;
+        line-height:78px;
+    }
+     .top span{
+     	float:right;
+	    color: #7a4624;
+        margin-right: 250px;
+        margin-top: 30px;
+     }
+     .content{
+     	width:980px;
+     	height:2000px;
+     	margin:0 auto;
+     }
+     .content-left, .content-right{
+     	float:left;
+     	padding-left: 20px;
+     	margin:30px auto 0 auto;
+     }
+     .left{
+     	width:640px;
+     	height:851px;
+     	background-color: white;
+     }
+     .left img{
+     	width:50px;
+     	height: 50px;
+     	margin: 10px 15px;
+     	vertical-align: middle;
+     }
+     .left a{
+     	text-decoration: none;
+     	color: #9b8878;
+     	font-size: 14px;
+     	line-height: 50px;
+     	position: relative;
+        top: 3px;
+        margin-left: -5px;
+     }
+     .left a:hover{
+     	color:black;
+     }
+     .left .age{
+     	position: relative;
+	    display: inline-block;
+	    width: 18px;
+	    height: 18px;
+	    padding-left: 20px;
+	    background-image: url("./image/female.png");
+	    background-size: 100% 100%;
+	    vertical-align: -7px;
+     }
+     .age span{
+     	position:absolute;
+     	font-size: 9px;
+        color: #fff;
+        right:5px;
+        bottom:2px;
+     }
+     .text p{
+     	font-size: 16px;
+     	font-weight: 400;
+     	line-height: 1.8;
+     	color:#333;
+     	margin-left:15px;
+     }
+     .card img{
+     	width:500px;
+     	height:400px;
+     	margin:10px 65px;
+     }
+     .discuss img{
+     	width:30px;
+     	height:30px;
+     }
+     .god img{
+     	width:16px;
+     	height:15px;
+     }
+     .god span{
+     	width:42px;
+     	height:21px;
+     }
+     .god a{
+     	color:#404040;
+     	text-decoration: none;
+     }
+     .discuss a{
+     	float:right;
+     	padding:10px;
+     	margin-top:13px;
+        width:24px;
+     	background-image: url("./image/group.png");
+     	background-repeat: no-repeat;
+     }
+    .weixin{
+    	background-position: 0px -80px;
+    }
+    .qq{
+    	background-position: 0px -152px;
+    }
+    .qzone{
+    	background-position: 0px -129px;
+    }
+    .weibo{
+    	background-position: 0px -104px;
+    }
+    .right{
+    	height:580px;
+    }
+     .right img{
+     	width:300px;
+     	height:70px;
+     }
+     .p1 img{
+     	width:300px;
+     	height:230px;
+     	margin-top: 20px;
+     }
+     .CD img{
+     	width:91px;
+     	height:24px;
+     	margin-top: 20px;
+     }
+     .CD p{
+     	display:inline-block;
+        font-size:12px; 
+        color:#aaa;
+        vertical-align: middle;
+        height:24px;
+        line-height: 5px;
+     }
+     .p3 img{
+     	width:300px;
+     	height:360px;
+     }
+     .bottom{
+     	height:275px;
+     	background-color:white;
+     	margin:60px 0 0 200px;
+     }
+     .bottom .bottom-one, .bottom .bottom-two, .bottom .bottom-three, .bottom .bottom-four, .bottom .bottom-five{
+     	float:left;
+     	padding-left:100px;
+     	line-height: 1.8;
+     }
+     .bottom-one span, .bottom-two span, .bottom-three span, .bottom-four span, .bottom-five span{
+     	font-size:18px;
+     	font-weight:400;
+     }
+     .bottom-one a, .bottom-two a, .bottom-three a, .bottom-four a, .bottom-five a{
+     	text-decoration: none;
+     	color:#666;
+     	font-size: 14px;
+    }
+     .bottom-one a:hover, .bottom-two a:hover, .bottom-three a:hover, .bottom-four a:hover, .bottom-five a:hover{
+     	color:black;
+    }
+    .finally img{
+    	width:960;
+    	margin:0 auto;
+    	margin-top: 25px;
+    }
+    .fixed{
+        width:100%;
+        height:100%;
+        top:0;
+        position:fixed;
+        background:rgba(0,0,0,0.3);
+        display:none;
+    }
+	</style>
+</head>
+<body>
+
+    <div class="all">
+
+     <div class="top clearfix">
+	    <img src="./image/qsbk.png">
+		<ul>
+			<li class="selected">热门</li>
+			<li>24小时</li>
+			<li>热图</li>
+			<li>文字</li>
+			<li>穿越</li>
+			<li>糗图</li>
+			<li>新鲜</li>
+			<li>投稿</li>
+		</ul>
+		<span>登录</span>
+     </div>
+      <div class="content clearfix">
+	    
+	    <div class="content-left">
+	    <div class="left">
+			<img src="./image/tx.png">
+			<a href="#">这里信号不好</a>
+            <span class="age"><span>21</span></span>
+		    <div class="text">
+				<p>小时候我笑点特别低</p>
+				<p>小学几年级忘了，好像是二、三年级，老师让我前面的同学读课文，那货把小昆虫读成小棍虫，老师拿过教鞭就是一顿敲 小棍虫，小棍虫，我让你小棍虫。。。</p>
+				<p>我憋了几次憋不住了就索性放肆大笑。老师往前一步走，手里的小棍就劈头盖脸招呼上了，我让你笑，我让你笑。。。妈的，全班都忍不住了。</p>
+		  	</div>
+		 	<div class="card">
+				<img src="./image/hh.jpg">
+		  	</div>
+		  	<span>250好笑·2评论</span>
+          	<div class="discuss">
+	          	<img src="./image/happy.png">
+	          	<img src="./image/cry.png">
+	          	<img src="./image/comment.png">
+          		<a href="#" class="weibo"></a>
+          		<a href="#" class="qzone"></a>
+          		<a href="#" class="qq"></a>
+          		<a href="#" class="weixin"></a>
+          	</div>
+          	<div class="god">
+             	<img src="./image/god.png">
+             	<span>微笑：</span>
+            	 <a href="www.baidu.com">哈哈哈哈哈哈。。。。。</a>
+          	</div>
+        </div>
+        
+        <div class="left">
+			<img src="./image/tx.png">
+			<a href="#">这里信号不好</a>
+            <span class="age"><span>21</span></span>
+		    <div class="text">
+				<p>小时候我笑点特别低</p>
+				<p>小学几年级忘了，好像是二、三年级，老师让我前面的同学读课文，那货把小昆虫读成小棍虫，老师拿过教鞭就是一顿敲 小棍虫，小棍虫，我让你小棍虫。。。</p>
+				<p>我憋了几次憋不住了就索性放肆大笑。老师往前一步走，手里的小棍就劈头盖脸招呼上了，我让你笑，我让你笑。。。妈的，全班都忍不住了。</p>
+		  	</div>
+		 	<div class="card">
+				<img src="./image/hh.jpg">
+		  	</div>
+		  	<span>250好笑·2评论</span>
+          	<div class="discuss">
+	          	<img src="./image/happy.png">
+	          	<img src="./image/cry.png">
+	          	<img src="./image/comment.png">
+          		<a href="#" class="weibo"></a>
+          		<a href="#" class="qzone"></a>
+          		<a href="#" class="qq"></a>
+          		<a href="#" class="weixin"></a>
+          	</div>
+          	<div class="god">
+             	<img src="./image/god.png">
+             	<span>微笑：</span>
+            	 <a href="www.baidu.com">哈哈哈哈哈哈。。。。。</a>
+          	</div>
+        </div>
+
+        </div>
+        
+        <div class="content-right">
+        <div class="right">
+			<img src="./image/inform.png">
+			<div class="p1">
+			    <img src="./image/p1.png"><br>
+			 	<img src="./image/p2.png">
+			</div>
+			<div class="CD">
+				<img src="./image/C+D.png">
+				<p>把糗事百科加入收藏夹</p>
+			</div>
+			<div class="p3">
+				<img src="./image/p3.png">
+			</div>
+	    </div>
+	    </div>
+	  
+	  </div>
+   
+   </div>
+
+    <div class="bottom">
+    	<div class="bottom-one">
+	    	<span>关于</span><br>
+	    	<a href="#">关于糗百</a><br>
+	    	<a href="#">加入我们</a><br>
+	    	<a href="#">联系方式</a>
+    	</div>
+    	<div class="bottom-two">
+    		<span>帮助</span><br>
+	    	<a href="#">在线反馈</a><br>
+	    	<a href="#">用户协议</a><br>
+	    	<a href="#">隐私政策</a>
+    	</div>
+    	<div class="bottom-three">
+    		<span>下载</span><br>
+	    	<a href="#">Android客户端</a><br>
+	    	<a href="#">Iphone客户端</a>
+    	</div>
+    	<div class="bottom-four">
+    		<span>关注</span><br>
+	    	<a href="#">微信</a><br>
+	    	<a href="#">新浪微博</a><br>
+	    	<a href="#">QQ空间</a>
+    	</div>
+    	<div class="bottom-five">
+    		<span>组织</span><br>
+	    	<a href="#">网站反馈群</a><br>
+	    	<a href="#">官方粉丝群</a>
+    	</div>
+    	<div class="finally">
+    		<img src="./image/finally.png">
+    	</div>
+    </div>
+    
+    <button class="show">show</button>
+    <div class="fixed">
+        <button class="hide">hide</button>
+    </div>
+    
+    <script type="text/javascript">
+$(function(){
+
+    $(".top ul li").click(function(){
+        $(".top ul li").removeClass("changed-bg");
+        $(this).addClass("changed-bg");
+        })
+
+    $(".show").click(function(){
+        $(".fixed").show();
+    })
+    $(".hide").click(function(){
+        $(".fixed").hide();
+    })
+    
+    
+})
+    </script>
+</body>
+</html>
